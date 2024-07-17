@@ -1,0 +1,95 @@
+#app {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background: linear-gradient(to right, #f7f8fc, #eef1f5);
+  }
+  
+  .mySwiper {
+    width: 100%;
+    max-width: 1200px; /* Increased the maximum width */
+    height: 600px; /* Increased the height */
+  }
+  
+  .swiper-slide {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 18px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+  }
+  
+  .swiper-slide-prev,
+  .swiper-slide-next {
+    transform: scale(0.85);
+  }
+  
+  .video-slide {
+    width: 100%;
+    height: 100%;
+    position: relative;
+  }
+  
+  .video-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 18px;
+  }
+  
+  .video-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  
+  .video-slide:hover .video-overlay {
+    opacity: 1;
+  }
+  
+  .video-overlay h3 {
+    margin: 0;
+    font-size: 1.5rem;
+  }
+  
+  .video-overlay p {
+    margin: 0;
+    font-size: 1rem;
+  }
+  
+  .play-button {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 2rem;
+    cursor: pointer;
+  }
+  
+  iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+    display: none;
+  }
+  
+  .video-slide:hover iframe {
+    display: block;
+  }
+  
